@@ -79,9 +79,7 @@ print(evaluate(dummy_clf, dummy_test_x, dummy_test_y))
 
 print("Can you do better than a dummy classifier?")
 
-# %%
-
-
+# %% Your solution to this classification problem
 
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.compose import ColumnTransformer
@@ -120,17 +118,3 @@ test_x = ct.transform(test_x)
 
 print("Test Set Performance")
 print(evaluate(clf, test_x, test_y))
-
-# %%
-truth = pd.read_csv("truth_titanic.csv")
-test_x = test[selected_columns]
-test_y = truth["Survived"]
-
-print("Test Set Performance")
-print(evaluate(clf, test_x, test_y))
-
-print("Can you do better than a dummy classifier?")
-
-
-# %% Your solution to this classification problem
-
